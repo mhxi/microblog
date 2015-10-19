@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>Blank</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/styles.css">
+
+  <!-- VENDOR SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="public/js/base.js"></script>
+</head>
+<body>
+  <div id="page-wrapper" class="container">
+
+    <div class="jumbotron">
+      <h1>Micro Blog</h1>
+    </div>
+
+    <!-- new post form -->
+    <form class="form-inline" id="new-post-form">
+      <input name="post" id="post-input" type="text" class="form-control" placeholder="What have you got to say?">
+      <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+    <button class="btn btn-default" type="button">Post Count <span class="badge">0</span></button>
+
+    <!-- list of posts -->
+    <ul class="list-group" id="post-ul">
+    <% for (var i = 0; i < posts.length; i++) { %>
+      <li class="list-group-item">
+        <%= posts[i].body %>
+        <button data-id="<%=posts[i].id %>" type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span>
+        </button>
+      </li>
+    <% } %>
+    </ul>
+
+  </div>
+</body>
+</html>
