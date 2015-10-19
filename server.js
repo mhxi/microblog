@@ -64,7 +64,8 @@ app.delete('/api/posts/:_id', function (req, res){
   });
 });
 
-// // update a single blog post
+// update a single blog post
+
 // app.put('/api/posts/:-id', function (req, res){
 //   // console.log('post id is: ', req.params);
 //   db.Post.find({

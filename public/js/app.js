@@ -55,10 +55,14 @@ $(document).ready(function(){
       // console.log("Failed to delete the post!");
     });
   });
+});
 
-  // // update post
-  // $('.list-group').on('click', function (e){
+  // update post
+
+  // $('.update').on('click', function (e){
   //   e.preventDefault();
+
+  //   var update = prompt("What do you want to update?");
 
   //   var postId = $(this).data().id;
   //   // console.log(postId);
@@ -70,11 +74,9 @@ $(document).ready(function(){
   //   })
   //   .done(function (data){
   //     // console.log(data);
-  //     $(postToUpdate).text();
+  //     $(postToUpdate).text(update);
   //   })
   //   .fail(function (data){
   //     // console.log("Failed to update the post!");
   //   });
   // });
-
-});
